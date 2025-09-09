@@ -38,7 +38,7 @@ template {
 }
 
 html {
-  font-family: "Mulish 400 normal";
+  font-family: "Mulish", sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -93,7 +93,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "Mulish 400 normal";
+  font-family: "Mulish", sans-serif;
   font-size: 1em;
 }
 
@@ -303,7 +303,7 @@ html {
 }
 
 body {
-  font-family: "Mulish 400 normal";
+  font-family: "Mulish", sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -398,7 +398,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Mulish 400 normal";
+  font-family: "Mulish", sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -742,7 +742,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "Mulish 400 normal";
+  font-family: "Mulish", sans-serif;
 }
 
 code {
@@ -2681,14 +2681,14 @@ input[type="button"].btn-block {
 }
 
 @font-face {
-  font-family: "Mulish 400 normal";
+  font-family: "Mulish", sans-serif;
 }
 
 .glyphicon {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: "Mulish 400 normal";
+  font-family: "Mulish", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-weight: normal;
@@ -6457,7 +6457,7 @@ button.close {
   height: 20px;
   margin-top: -10px;
   margin-left: -10px;
-  font-family: "Mulish 400 normal";
+  font-family: "Mulish", sans-serif;
 }
 
 .carousel-control .icon-prev:before {

@@ -10,7 +10,7 @@ body, html { overflow-x:hidden; }
 
 body {
     background-color: #ffffff;
-    font-family:  "Mulish 400 normal";
+    font-family:  "Mulish", sans-serif;
     font-size: 14px;
 	font-weight: 300; 
 	font-style: normal; 
@@ -18,7 +18,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish 400 normal"; }
+h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish", sans-serif; }
 
 * {
   -webkit-border-radius: 0 !important;
@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish 400 normal"; }
 }
 
 .logo_title{
-    font-family: "Gotu 400 normal";
+    font-family: "Gotu", sans-serif;
     float: left;
     text-decoration: none; color: #064232;font-weight: 500;
     margin: 0;
@@ -65,10 +65,10 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish 400 normal"; }
 
 @media (max-width: 452px) {
     .logo_title{
-        font-family: "Gotu 400 normal";
-        font-size: 24px;
+        font-family: "Gotu", sans-serif;
+        font-size: 22px;
         float: left;
-        text-decoration: none; color: #064232;font-weight: 500;
+        text-decoration: none; color: #064232;font-weight: 700;
         margin: 0;
     }
 }
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish 400 normal"; }
 }
 
 .templatemo-slogan {
-    font-family:  "Mulish 400 normal";
+    font-family:  "Mulish", sans-serif;
     font-weight: normal;
     font-size: 42px;
     margin: 60px 0;
@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish 400 normal"; }
 }
 
 .templatemo-service-item {
-    font-family:  "Mulish 400 normal";
+    font-family:  "Mulish", sans-serif;
     margin-bottom: 10px;
     font-size: 20px;
     padding: 30px;
@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish 400 normal"; }
 }
 
 .subheader {
-    font-family: "Mulish 400 normal";
+    font-family: "Mulish", sans-serif;
     font-weight: normal;
     margin-top: 12px;
     font-size: 12px;
@@ -310,7 +310,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish 400 normal"; }
 
 .templatemo-team {
     background: url('../images/background.png') ; 
-    font-family:  "Mulish 400 normal";
+    font-family:  "Mulish", sans-serif;
     min-height:590px;
     color:#064232;
 
@@ -356,7 +356,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish 400 normal"; }
 }
 
 .team-inner-header {
-    font-family: "Mulish 400 normal";
+    font-family: "Mulish", sans-serif;
     font-weight:600;
     font-size:16px;
 }
@@ -626,7 +626,7 @@ ul.templatemo-project-gallery  li  a img:hover {
 .templatemo-tweets {
     background-color: #8996a0;
     min-height:200px;
-    font-family:  "Mulish 400 normal";
+    font-family:  "Mulish", sans-serif;
     font-size:20px;
     color:#064232;
     margin-top:100px;
