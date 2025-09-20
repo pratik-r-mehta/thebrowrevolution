@@ -63,13 +63,31 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish", sans-serif; }
     font-size: 40px;
 }
 
-@media (max-width: 452px) {
+.mobile-break {
+  display: none; /* hidden on big screens */
+}
+
+@media (max-width: 592px) {
     .logo_title{
         font-family: "Gotu", sans-serif;
         font-size: 22px;
         float: left;
-        text-decoration: none; color: #064232;font-weight: 700;
+        text-decoration: none; color: #064232;font-weight: 500;
         margin: 0;
+    }
+}
+
+@media (max-width: 452px) {
+    .logo_title{
+        font-family: "Gotu", sans-serif;
+        font-size: 20px;
+        float: left;
+        text-decoration: none; color: #064232;font-weight: 500;
+        margin: 0;
+    }
+
+    .mobile-break {
+        display: block; /* hidden on big screens */
     }
 }
 
@@ -106,9 +124,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish", sans-serif; }
 }
 
 .my-footer-content-socials {
-    text-align: right;
     display: flex;
-    justify-content: flex-end;
 }
 
 @media (max-width: 992px) {
@@ -117,9 +133,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish", sans-serif; }
         padding: 10px;
     }
     .my-footer-content-socials {
-        text-align: center;
         display: flex;
-        justify-content: center;
         padding: 10px;
     }
 }
@@ -176,6 +190,20 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish", sans-serif; }
 .templatemo-service {
     margin-bottom: 100px;
     margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .templatemo-service {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 452px) {
+    .templatemo-service {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
 }
 
 .templatemo-service-item {
@@ -300,10 +328,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish", sans-serif; }
     margin-left: 15px; 
 }
 
-.team_hr_right {
-    margin-left: 30px;
-}
-
 .hr_gray {
     border: 1px solid #cccccc; 
 }
@@ -316,8 +340,9 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish", sans-serif; }
 
 }
 .templatemo-line-header {
-    margin-top:50px;
-    margin-bottom:50px;
+    margin-top:10px;
+    margin-bottom:10px;
+    display: flex;
 }
 
 .member-thumb:hover .thumb-overlay {
@@ -436,7 +461,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish", sans-serif; }
 
 .templatemo-line-header span {
     font-size: 18px; 
-    float :left; 
+    float: left; 
     margin-top: 10px;
 }
 
@@ -477,7 +502,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: "Mulish", sans-serif; }
 }
 
 .head_contact {
-    padding-bottom:80px; 
+    padding-bottom:30px; 
     margin-bottom:0;
 }
 
@@ -662,6 +687,8 @@ ul.templatemo-project-gallery  li  a img:hover {
     .templatemo-project-box, .project-overlay {
         height:170px;
         width:170px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .project-overlay {
@@ -709,6 +736,8 @@ ul.templatemo-project-gallery  li  a img:hover {
        height:130px;
        width:130px;
        padding-top: 0px;
+       margin-left: auto;
+        margin-right: auto;
     }
 
     .project-overlay {
@@ -785,18 +814,16 @@ ul.templatemo-project-gallery  li  a img:hover {
 	}
 }
 
-@media  (min-width:410px) and  ( max-width: 536px) {
-	 .team_hr {
+@media  (min-width:430px) and  ( max-width: 536px) {
+	.team_hr {
         width: 21%;
     }
 
-    .team_hr_right {
-        margin-left: 21px;
-    }
-    
-    .templatemo-project-box {
-        height: auto;
-        width: auto;
+    .templatemo-project-box, .project-overlay {
+        height: 250px;
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .project-overlay {
@@ -805,8 +832,49 @@ ul.templatemo-project-gallery  li  a img:hover {
     
 }
 
-@media  ( max-width: 410px) {
-	 .team_hr {
-		width: 11%;
-	}
+@media  ( max-width: 430px) {
+	.team_hr {
+        width: 21%;
+    }
+
+    .templatemo-project-box, .project-overlay {
+       height: 250px;
+       width: 250px;
+       padding-top: 0px;
+       margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-overlay {
+        padding-top: 40%;
+    }
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-content > span {
+  flex: 1;   /* text takes remaining width */
+}
+
+.footer-content > .my-footer-content-socials {
+  flex: 0;   /* socials stay compact */
+}
+
+@media (max-width: 616px) {
+  .footer-content {
+    flex-direction: column;   /* stack one after another */
+    align-items: center;      /* center align when stacked */
+    text-align: center;       /* optional: center text */
+  }
+
+  .footer-content > span,
+  .footer-content > .my-footer-content-socials {
+    width: 100%;
+    justify-content: center;
+  }
 }

@@ -33,62 +33,28 @@ jQuery(function ($) {
 
     $(".templatemo-top-menu ").stickUp();
 
-    // gallery category
-    // $(".templatemo-gallery-category a").click(function (e) {
-    //   e.preventDefault();
-    //   $(this).parent().children("a").removeClass("active");
-    //   $(this).addClass("active");
-    //   var linkClass = $(this).attr("href");
-    //   $(".gallery").each(function () {
-    //     if ($(this).is(":visible") == true) {
-    //       $(this).hide();
-    //       $("#loadMore").hide();
-    //       $("#showMore").hide();
-    //     }
-    //   });
-    //   $(linkClass).fadeIn();
-
-    //   if (linkClass == ".gallery") {
-    //     location.reload();
-    //   }
-    // });
-
     //gallery light box setup
     $("a.colorbox").colorbox({
       rel: function () {
         return $(this).data("group");
       },
     });
-
-    //for loadmore and showless buttons and functionality...
-    // size_li = $(".templatemo-project-gallery li").size();
-    $("#showLess").hide();
-    x = 10;
-    // $(".templatemo-project-gallery li:gt('" + (x - 1) + "')").hide();
-    // $("#loadMore").click(function () {
-    //   x = x + 5 <= size_li ? x + 5 : size_li;
-    //   $(".templatemo-project-gallery li:lt(" + x + ")").show();
-    //   $("#showLess").show();
-    //   if (x >= size_li) {
-    //     $("#loadMore").hide();
-    //   }
-    // });
-    // $("#showLess").click(function () {
-    //   x = x - 5 <= 10 ? 10 : x - 5;
-    //   $(".templatemo-project-gallery li")
-    //     .not(":lt(" + x + ")")
-    //     .hide();
-    //   $("#loadMore").show();
-    //   if (x <= 10) {
-    //     $("#showLess").hide();
-    //   }
-    // });
   });
 });
 
 // scroll animation
 function scrollTo(selectors) {
   if (!$(selectors).size()) return;
-  var selector_top = $(selectors).offset().top - top_menu_height;
-  $("html,body").animate({ scrollTop: selector_top }, "slow");
+
+  // If mobile menu is open, close it first
+  var $navbarCollapse = $('.navbar-collapse');
+  if ($navbarCollapse.hasClass('show')) {
+    $navbarCollapse.collapse('hide');
+  }
+
+  // Scroll after collapse animation
+  setTimeout(function () {
+    var selector_top = $(selectors).offset().top - top_menu_height;
+    $("html,body").animate({ scrollTop: selector_top }, "slow");
+  }, 300); // matches collapse animation duration
 }
