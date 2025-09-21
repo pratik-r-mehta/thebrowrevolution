@@ -16,7 +16,7 @@
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 
   <!-- Custom styles for this template -->
-  <link href="js/colorbox/colorbox.css" rel="stylesheet" type="text/css" />
+  <link href="css/colorbox/colorbox.css" rel="stylesheet" type="text/css" />
   <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 
   <link rel="stylesheet" href="/css/font-awesome.min.css" />
@@ -719,6 +719,25 @@
           status.style.color = "red";
           console.log(error);
         });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".colorbox").colorbox({
+        rel: "colorbox",
+        maxWidth: "95%",   // image will never exceed 95% of screen width
+        maxHeight: "95%",  // image will never exceed 95% of screen height
+        scalePhotos: true,
+        photo: true
+      });
+
+      // optional: re-adjust on window resize
+      $(window).resize(function () {
+        $.colorbox.resize({
+          maxWidth: "95%",
+          maxHeight: "95%"
+        });
+      });
     });
   </script>
 
